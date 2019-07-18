@@ -1,15 +1,18 @@
 import React from "react";
 import "./App.css";
 import NasaGrid from "./NasaGrid";
+import 'semantic-ui-css/semantic.min.css';
+import { Header } from "./StyledWidgets";
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Nasa: Photo of the Day</h1>
-      
-      <h2>Enjoy these awesome pictures!</h2>
-      <NasaGrid limit={10} />
+      <Header>
+        <h1>Nasa: Photo of the Day</h1>
+      </Header>
+
+      <NasaGrid />
     </div>
   );
 }
