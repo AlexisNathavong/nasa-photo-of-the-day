@@ -4,7 +4,6 @@ import ImageCard from "./ImageCard";
 import InfoCard from "./InfoCard";
 import 'semantic-ui-css/semantic.min.css';
 import { Section } from "./StyledWidgets";
-import { Content } from "./StyledWidgets";
 
 export default function NasaGrid ({limit}) {
     
@@ -23,12 +22,14 @@ export default function NasaGrid ({limit}) {
         console.log(nasa);
     return (
         <div className= "nasa-grid">
-            <Section>
-                <ImageCard key={nasa.url} imgUrl={nasa.url} />
-            </Section>
-            <Content>
-                <InfoCard info={nasa}/>
-            </Content>
+            
+                <Section>
+                    <ImageCard key={nasa.url} imgUrl={nasa.url} />
+                </Section>
+                {/* <Content> */}
+                    <InfoCard info={nasa}/>
+                {/* </Content> */}
+            
         </div> 
         
     )
